@@ -127,7 +127,7 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ state, onSendMessage, o
               {friends.map(f => (
                 <button 
                   key={f.id}
-                  onClick={() => { setSelectedFriendId(f.id); setAiSummary(null); setActiveView('overview'); }}
+                  onClick={() => { setSelectedFriendId(f.id ?? null); setAiSummary(null); setActiveView('overview'); }}
                   className={`w-full p-6 text-left hover:bg-slate-50 transition-all flex items-center justify-between ${selectedFriendId === f.id ? 'bg-indigo-50 border-r-4 border-indigo-600' : ''}`}
                 >
                   <div className="flex items-center gap-4">
